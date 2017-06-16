@@ -19,6 +19,21 @@ type OSInfo struct {
 	Version string
 }
 
+func (o OSInfo) IsAndroid() bool {
+	if o.Name == "Android" {
+		return true
+	} else {
+		return false
+	}
+}
+
+func (o OSInfo) IsIPhone() bool {
+	if o.Name == "iPhone OS" {
+		return true
+	} else {
+		return false
+	}
+}
 // Normalize the name of the operating system. By now, this just
 // affects to Windows NT.
 //
